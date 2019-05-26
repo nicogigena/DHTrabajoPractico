@@ -11,8 +11,17 @@ section.generos{
   background-color:red;
   margin-top:0
 }
+
 section.generos img{
   width: 100%;
+}
+
+.container {
+  background-color: orange;
+  margin-top:15vh;
+  width: 85%;
+  margin-left: 0;
+  padding:0;
 }
 
 header nav {
@@ -23,14 +32,6 @@ header nav {
   position: fixed;
   top:0;
   width:85%;
-}
-
-.container {
-  background-color: orange;
-  margin-top:15vh;
-  width: 85%;
-  margin-left: 0;
-  padding:0;
 }
 
 div.peliculas {
