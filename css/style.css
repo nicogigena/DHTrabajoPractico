@@ -34,16 +34,68 @@ header nav {
   width:85%;
 }
 
-div.peliculas {
+div.carrusel {
   font-size: 2em;
 }
 
-div.peliculas section.valoradas {
+div.carrusel section.valoradas {
   background-color: yellow;
 }
 
-div.peliculas img {
+div.carrusel img {
   width: 50%;
   margin-left:25%;
   margin-right:25%;
+}
+
+div.peliculas {
+  overflow: hidden;
+}
+
+section.valoradas{
+  float: left;
+  width: 50%
+}
+
+section.proximas{
+  float: left;
+  width: 50%;
+}
+
+div.peliculas2{
+  overflow: hidden;
+}
+
+section.nombres1{
+  float: left;
+  width: 50%;
+}
+section.banner1{
+  float: left;
+  text-align: center;
+  width: 50%;
+  background-color: white;
+  height: 50vh;
+}
+.valoradas p{
+  text-align: center;
+  font-weight: bold;
+}
+.proximas p{
+  text-align: center;
+  font-weight: bold;
+}
+.peliculas3{
+  overflow: hidden;
+}
+.nombres2{
+  float: left;
+  width: 50%;
+}
+.banner2{
+  float: left;
+  background-color: white;
+  text-align: center;
+  width: 50%;
+  height: 50vh;
 }
