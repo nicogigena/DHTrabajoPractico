@@ -17,7 +17,7 @@ section.generos img{
 }
 
 .container {
-  background-color: orange;
+  background-color: white;
   margin-top:15vh;
   width: 85%;
   margin-left: 0;
@@ -32,10 +32,12 @@ header nav {
   position: fixed;
   top:0;
   width:85%;
+  z-index: 50;
 }
 
 div.carrusel {
   font-size: 2em;
+  z-index: 1;
 }
 
 div.carrusel section.valoradas {
@@ -44,8 +46,19 @@ div.carrusel section.valoradas {
 
 div.carrusel img {
   width: 50%;
-  margin-left:25%;
-  margin-right:25%;
+  margin: 0 auto;
+}
+.carousel-inner>.item>img{
+    height: 90vh;
+
+}
+.container2{
+  width: 50%;
+  margin: 0 auto;
+}
+h2{
+  text-align: center;
+  font-weight: bold;
 }
 
 div.peliculas {
