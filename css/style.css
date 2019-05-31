@@ -51,6 +51,10 @@ header nav {
   flex-wrap: nowrap;
 }
 
+header nav div.logo img{
+  height: 100%;
+}
+
 header nav div.form {
   display: flex;
   align-items: center;
