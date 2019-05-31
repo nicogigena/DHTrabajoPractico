@@ -33,6 +33,32 @@ header nav {
   top:0;
   width:85%;
   z-index: 50;
+  display:flex;
+  flex-wrap: nowrap;
+}
+
+header nav div.form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin:0 auto;
+}
+div.form form{
+  display: flex;
+  flex-wrap:nowrap;
+}
+
+nav form input {
+  width: 85%;
+}
+
+nav form button.btn{
+  width: 15%;
+  padding:0;
+}
+nav form button.btn img{
+  width: 35px;
+  margin: 0 auto; 
 }
 
 div.carrusel {
