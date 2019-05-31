@@ -8,24 +8,38 @@ section.generos{
   top:0;
   height: 100%;
   width:15%;
-  background-color:red;
+  background-color:rgba(183, 186, 188,0.9);
   margin-top:0
+}
+
+body{
+  background-color: #00E8AE
 }
 
 section.generos img{
   width: 100%;
 }
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
 
 .container {
-  background-color: white;
+  background-color: black;
   margin-top:15vh;
   width: 85%;
   margin-left: 0;
   padding:0;
+
+
 }
 
 header nav {
-  background-color: black;
+  background-color: grey;
   height:15vh;
   margin:0;
   padding:0;
@@ -58,16 +72,17 @@ nav form button.btn{
 }
 nav form button.btn img{
   width: 35px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 div.carrusel {
   font-size: 2em;
   z-index: 1;
+  background-color: black;
 }
 
 div.carrusel section.valoradas {
-  background-color: yellow;
+  background-color: black;
 }
 
 div.carrusel img {
@@ -109,12 +124,14 @@ section.nombres1{
   float: left;
   width: 50%;
 }
-section.banner1{
-  float: left;
-  text-align: center;
-  width: 50%;
-  background-color: white;
-  height: 50vh;
+section.banner1 {
+    float: left;
+    text-align: center;
+    width: 43%;
+    background-color: black;
+}
+section.banner1 img {
+  width: 100%;
 }
 .valoradas p{
   text-align: center;
@@ -133,8 +150,11 @@ section.banner1{
 }
 .banner2{
   float: left;
-  background-color: white;
+  background-color: black;
   text-align: center;
-  width: 50%;
+  width: 43%;
   height: 50vh;
+}
+section.banner2 img {
+  width: 100%;
 }
