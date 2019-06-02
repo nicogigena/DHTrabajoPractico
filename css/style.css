@@ -7,9 +7,36 @@ section.generos{
   right:0;
   top:0;
   height: 100%;
-  width:15%;
   background-color:rgba(183, 186, 188,0.9);
-  margin-top:0
+  margin-top:0;
+}
+/* Clases Custom (JavaScript) */
+    .w-15{
+      width:15%;
+    }
+    .w-85{
+      width: 85%;
+    }
+    .w-100{
+      width: 100%;
+    }
+    .w-0 {
+      width:0;
+    }
+    .display-none {
+      display: none;
+    }
+    .display-block {
+      display: block;
+    }
+
+section.generos div.gen-button{
+  width:50px;
+  height:50px;
+  position: absolute;
+  top:45vh;
+  right:100%;
+  background-color:yellow;
 }
 
 body{
@@ -19,19 +46,12 @@ body{
 section.generos img{
   width: 100%;
 }
-.display-none {
-  display: none;
-}
 
-.display-block {
-  display: block;
-}
 
 
 .container {
   background-color: black;
-  margin-top:15vh;
-  width: 85%;
+  margin-top:140px;
   margin-left: 0;
   padding:0;
 
@@ -40,19 +60,59 @@ section.generos img{
 
 header nav {
   background-color: grey;
-  height:15vh;
+  height:140px;
   margin:0;
   padding:0;
   position: fixed;
   top:0;
-  width:85%;
   z-index: 50;
   display:flex;
   flex-wrap: nowrap;
+  display:flex;
+  justify-content: space-between;
+}
+
+div.pos-f-t {
+  width:69%;
+}
+
+div.logo {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+  background-color:white;
+  width:15%;
 }
 
 header nav div.logo img{
   height: 100%;
+  width:80%;
+}
+
+header nav div.navbar {
+  width:70%;
+  background-color: yellow;
+  margin-bottom:0;
+  display: flex;
+}
+ul.nav {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+}
+
+ul.nav li{
+  font-size:2em;
+  background-color:white;
+}
+
+ul.nav li a {
+
+}
+
+ul.nav li:hover a {
+  text-decoration: underline;
 }
 
 header nav div.form {
@@ -60,6 +120,8 @@ header nav div.form {
   align-items: center;
   flex-wrap: wrap;
   margin:0 auto;
+  right:0;
+  width:15%;
 }
 div.form form{
   display: flex;
@@ -71,6 +133,7 @@ nav form input {
 }
 
 nav form button.btn{
+  height:34px;
   width: 15%;
   padding:0;
 }
