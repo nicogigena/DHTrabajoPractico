@@ -219,13 +219,80 @@ div.carrusel section.valoradas {
 div.carrusel img {
   width: 50%;
   margin: 0 auto;
+
+}
+img.aladin{
+  z-index: 5;
+}
+
+div.item.active{
+  position: relative;
+}
+div.aladin img.logoaladin{
+position: absolute;
+left: 60%;
+bottom: 75%;
+width: 30%;
+height: 30vh;
+z-index: 10;
+}
+
+.parrafoaladin{
+  width: 40%;
+  position: absolute;
+  bottom: 10%;
+  left: 55%;
+  font-size: 4.5vh;
+  color: white;
+  z-index: 20;
+}
+
+.imgnosotros{
+  float: right;
+  }
+
+div.item.nosotros{
+    position: relative;
+  }
+
+div.nosotros img.logonosotros{
+position: absolute;
+right: 60%;
+z-index: 10;
+}
+
+p.parrafonosotros {
+  position: absolute;
+  left:15%;
+  width: 35%;
+  color: white;
+  z-index: 20;
+}
+
+div.item.capitanamarvel{
+  position: relative;
+}
+div.capitanamarvel img.logomarvel{
+  position: absolute;
+  right: 60%;
+  bottom: 70%;
+  width: 33%;
+  height: 33vh;
+}
+
+p.parrafomarvel{
+  position: absolute;
+  width: 35%;
+  bottom: 20%;
+  left: 10%;
+  color: white;
 }
 .carousel-inner>.item>img{
-    height: 90vh;
+    height: 100vh;
 
 }
 .container2{
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 h2{
