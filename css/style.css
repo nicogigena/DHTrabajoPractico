@@ -1,5 +1,9 @@
 * {
-  font-family: 'Josefin Sans', sans-serif; // hay que elegir una fuente que les guste en https://fonts.google.com/ y despues agregarla
+  font-family: 'Josefin Sans', sans-serif; /* hay que elegir una fuente que les guste en https://fonts.google.com/ y despues agregarla*/
+}
+
+body{
+  background-color: #00E8AE
 }
 
 section.generos{
@@ -10,12 +14,10 @@ section.generos{
   background-color: #4ea0e8;
   margin-top: 0;
 }
-
 section.generos ul {
   padding:0;
 }
-
-section.generos li{
+section.generos ul li{
   height: 4.9vh;
   list-style: none;
   margin: 0 4px;
@@ -24,36 +26,80 @@ section.generos li{
   font-size: 1.3em;
   text-align: center;
 }
-section.generos li:hover{
-  background-color: gainsboro;
+section.generos ul li:first-child{
+  margin-top:5px
 }
-
-section.generos button.btn {
+section.generos ul li button.btn {
   height: 4.8vh;
   font-size: 1.4em;
   color: #4ea0e8;
   background-color: #00E8AE;
-  padding-top: 2px;
+  padding-top: 5px;
 }
-section.generos li:first-child{
-  margin-top:5px
-}
-section.generos button.btn:hover{
+section.generos ul li button.btn:hover{
   color: #00E8AE;
     background-color:black;
 }
-/* Clases Custom (JavaScript) */
 
+section.generos div.gen-button{
+  position: fixed;
+  top:45%;
+  right:0px;
+  width:50px;
+  height:50px;
+  background-color: yellow;
+  z-index: 10;
+}
+.gen-btn{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background-color: #00E8AE;
+  z-index: 10;
+  right: 15%;
+  top: 45%;
+  border-radius: 5px;
+}
+.gen-btn button{
+  width: 50px;
+  height: 50px;
+  background-color: #00E8AE;
+  border-radius: 5px;
+  margin:0;
+  padding:0;
+}
+.gen-btn button img {
+  height:50px;
+  width:50px;
+  margin:0;
+  padding:0;
+  padding-right:5px;
+}
+
+/* Clases Custom (JavaScript) */
+    .w-0 {
+      width:0;
+    }
     .w-15{
       width:15%;
     }
-    .w-100{
-      width: 100%;}
+    .w-70{
+      width:70%;
+    }
+    .w-80{
+      width:80%;
+    }
     .w-85{
       width: 85%;
     }
-    .w-0 {
-      width:0;
+    .w-100{
+      width: 100%;
+    }
+    .r-0{
+      right:0;
+    }
+    .r-15{
+      right:15%;
     }
     .display-none {
       display: none;
@@ -61,298 +107,228 @@ section.generos button.btn:hover{
     .display-block {
       display: block;
     }
-    .w-70{
-      width:70%;
-      .
-
-
-
-    }
-    .w-80{
-      width:80%;
-    }
-
-section.generos div.gen-button{
-  width:50px;
-  height:50px;
-  position: absolute;
-  top:45vh;
-  right:100%;
-  background-color:yellow;
-}
-
-body{
-  background-color: #00E8AE
-}
-
-section.generos img{
-  width: 100%;
-}
-
-
 
 .container {
   background-color: black;
-  margin-top:100px;
+  margin-top:10vh;
   margin-left: 0;
   padding:0;
-
+  background-color: #00E8AEs
 
 }
-
-header nav {
-  background-color: grey;
-  height:100px;
-  margin:0;
-  padding:0;
-  position: fixed;
-  top:0;
-  z-index: 50;
-  display:flex;
-  flex-wrap: nowrap;
-  display:flex;
-  justify-content: space-between;
-}
-
-div.pos-f-t {
-  width:69%;
-}
-
-div.logo {
-  display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */
-  background-color:#00E8AE;
-  width:10%;
-}
-
-header nav div.logo img{
-  width:140px;
-  height: 100%;
-}
-
-div.bienvenido {
+/*HEADER*/
+  header nav {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: grey;
+    height:10vh;
+    margin:0;
+    padding:0;
+    position: fixed;
+    top:0;
+    z-index: 50;
+    display:flex;
+    flex-wrap: nowrap;
+    display:flex;
+    justify-content: space-between;
+    border:0;
+  }
+  header nav div.pos-f-t {
+    width:69%;
+  }
+  header nav div.logo {
+    border-bottom-left-radius: 30px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    background-color:#00E8AE;
+    width:10%;
+  }
+  header nav div.logo img{
+    width:130px;
+    height: 100%;
+  }
+  header nav div.bienvenido{
     width: 10%;
     font-size: 2em;
     text-align: center;
-    padding-top: 5px;
     color: grey;
     background-color: #00E8AE;
-}
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
-header nav div.navbar {
-  width:65%;
-  background-color: #00E8AE;
-  margin-bottom:0;
-  display: flex;
-}
-ul.nav {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
-  width:100%;
-  border-radius: 0
-}
-div.navbar {
-  border-radius: 0;
-}
+  }
+  header nav div.bienvenido p{
+    margin:0;
+    color:#4ea0e8;
+  }
+  header nav div.navbar {
+    width:65%;
+    background-color: #00E8AE;
+    margin-bottom:0;
+    display: flex;
+    border-radius: 0;
+  }
+  header nav div.navbar ul.nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    border-radius: 0
+  }
+  header nav div.navbar ul.nav li{
+    font-size: 1.7em;
+    background-color: white;
+    padding: 1%;
+    padding-top:13px;
+    border-radius: 25px;
+    border: 1px solid slategrey;
+    width:20%;
+    text-align:center;
+  }
+  header nav div.navbar ul.nav li a.nav-link {
+    padding:0;
+  }
+  header nav div.navbar ul.nav li:hover a {
+    text-decoration: none;
+    color:white
+  }
+  header nav div.navbar ul.nav li:hover {
+    background-color:#4ea0e8;
+    color:white
+  }
+  header nav div.navbar ul.nav li.active{
+      background-color:#4ea0e8;
+  }
+  header nav div.navbar ul.nav li.active a{
+    color:white
+  }
+  .nav>li>a:hover {
+      text-decoration: none;
+      background-color: transparent;
+  }
+  .nav>li>a:focus {
+      text-decoration: none;
+      background-color: transparent;
+  }
+  header nav div.form {
 
-ul.nav li{
-  font-size: 2em;
-  background-color: white;
-  padding: 1%;
-  padding-top:13px;
-  border-radius: 25px;
-  border: 1px solid slategrey;
-  width:20%;
-  text-align:center;
-}
-
-ul.nav li a.nav-link {
-  padding:0;
-}
-
-ul.nav li:hover a {
-  text-decoration: underline;
-}
-
-header nav div.form {
-  background-color: #00E8AE;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin:0 auto;
-  right:0;
-  width:15%;
-  padding:0.5%;
-}
-div.form form{
-  display: flex;
-  flex-wrap:nowrap;
-}
-
-nav form input {
-  width: 85%;
-}
-
-nav form button.btn{
-  height:34px;
-  width: 15%;
-  padding:0;
-  border-radius:5px;
-}
-nav form button.btn img{
-  width: 20px;
-  margin: 0 auto;
-}
-
-div.carrusel {
-  font-size: 2em;
-  z-index: 1;
-  background-color: black;
-}
-
-div.carrusel section.valoradas {
-  background-color: black;
-}
-
-div.carrusel img {
-  width: 50%;
-  margin: 0 auto;
-
-}
-img.aladin{
-  z-index: 5;
-}
-
-div.item.active{
-  position: relative;
-}
-div.aladin img.logoaladin{
-position: absolute;
-left: 60%;
-bottom: 75%;
-width: 30%;
-height: 30vh;
-z-index: 10;
-}
-
-.parrafoaladin{
-  width: 40%;
-  position: absolute;
-  bottom: 10%;
-  left: 55%;
-  font-size: 4.5vh;
-  color: white;
-  z-index: 20;
-}
-
-.imgnosotros{
-  float: right;
+    border-bottom-right-radius: 30px;
+    background-color: #00E8AE;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    right: 0;
+    width: 15%;
+    padding: 0.5%;
+  }
+  header nav div.form form{
+    display: flex;
+    flex-wrap:nowrap;
+  }
+  header nav form input {
+    margin-right:1px;
+  }
+  header nav form button.btn{
+    height: 34px;
+    width: 15%;
+    padding: 0;
+    border-radius: 5px;
+    padding-right: 2px;
+  }
+  header nav form button.btn img{
+    width: 20px;
+    margin: 0 auto;
   }
 
-div.item.nosotros{
+/*CARRUSEL*/
+  div.carrusel {
+    position:relative;
+    height:90vh;
+  }
+  div.carrusel h2{
+    position: absolute;
+    top:0px;
+    color:white;
+    width:100%;
+    background-color:rgba(155,155,155,0.4);
+    z-index: 3;
+    margin: 10px auto;
+    padding:5px;
+    text-align: center
+  }
+  div.carrusel {
+  }
+  div.carrusel div.carousel-inner{
+    height:90vh;
+  }
+  div.carrusel div.carousel-inner div.item{
     position: relative;
   }
+  div.carrusel div.carousel-inner div.item img.backdrop{
+    width:100%;
+    height:90vh;
+  }
+  div.carrusel div.carousel-inner div.item div.item-text{
+    position:absolute;
+    bottom:7%;
+    background-color: rgba(155,155,155,0.6);
+    color:white;
+    width:80%;
+    font-weight: bold;
+    margin-left:10%;
+    font-size: 2em;
+  }
 
-div.nosotros img.logonosotros{
-position: absolute;
-right: 60%;
-z-index: 10;
-}
+  /*Sección 2 de peliculas*/
+  div.maspelis{
+    height:600px;
+    display:flex;
+    background-color: #00E8AE
+  }
+  div.maspelis section{
+    width:50%;
 
-p.parrafonosotros {
-  position: absolute;
-  left:15%;
-  width: 35%;
-  color: white;
-  z-index: 20;
-}
 
-div.item.capitanamarvel{
-  position: relative;
-}
-div.capitanamarvel img.logomarvel{
-  position: absolute;
-  right: 60%;
-  bottom: 70%;
-  width: 33%;
-  height: 33vh;
-}
-
-p.parrafomarvel{
-  position: absolute;
-  width: 35%;
-  bottom: 20%;
-  left: 10%;
-  color: white;
-}
-.carousel-inner>.item>img{
-    height: 100vh;
-
-}
-.container2{
-  width: 100%;
-  margin: 0 auto;
-}
-h2{
-  text-align: center;
-  font-weight: bold;
-}
-
-div.peliculas {
-  overflow: hidden;
-}
-
-section.valoradas{
-  float: left;
-  width: 50%
-}
-
-section.proximas{
-  float: left;
-  width: 50%;
-}
-
-div.peliculas2{
-  overflow: hidden;
-}
-
-section.nombres1{
-  float: left;
-  width: 50%;
-}
-section.banner1 {
-    float: left;
+  }
+  div.maspelis section h2{
+    width: 100%;
     text-align: center;
-    width: 43%;
-    background-color: black;
-}
-section.banner1 img {
-  width: 100%;
-}
-.valoradas p{
-  text-align: center;
-  font-weight: bold;
-}
-.proximas p{
-  text-align: center;
-  font-weight: bold;
-}
-.peliculas3{
-  overflow: hidden;
-}
-.nombres2{
-  float: left;
-  width: 50%;
-}
-.banner2{
-  float: left;
-  background-color: black;
-  text-align: center;
-  width: 43%;
-  height: 50vh;
-}
-section.banner2 img {
-  width: 100%;
-}
+    margin: 0;
+    margin-top: 0px;
+    font-size: 3em;
+    height: 58px;
+    padding: 10px;
+  }
+  div.maspelis section div.lista-banner{
+    width:55%;
+    margin:0;
+  }
+  div.maspelis section{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  div.maspelis section div.lista-banner ol li{
+    height:50px;
+    margin:2px;
+    font-size:2em;
+    background-color: yellow;
+    padding-top:8px;
+    border-radius: 3px;
+  }
+  div.maspelis section div.banner{
+    width: 42%;
+    margin-left: 1.5%;
+    margin-bottom: 2%;
+    background-color: red;
+  }
+
+  footer{
+    height:200px;
+    background-color:white;
+  }

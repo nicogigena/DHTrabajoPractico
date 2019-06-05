@@ -1,16 +1,26 @@
 window.onload = function(){
     //APIKey = 515c73c060475afdc6d4bfe35f81b7e3
-
+    console.log(1);
   var queryGeneros = document.querySelector("section.generos")
-  var queryGenerosBtn = document.querySelector("section.generos div.btn")
-  var queryContainer = document.querySelector(".container")
-    queryGenerosBtn.addEventListener("click",function(event){
+  var queryGenBtn = document.querySelector("div.gen-btn")
+  var queryContainer = document.querySelector(".container");
+
+  queryGenBtn.addEventListener("click",function(){
       queryGeneros.classList.toggle("w-15")
       queryGeneros.classList.toggle("w-0")
       queryContainer.classList.toggle("w-85")
       queryContainer.classList.toggle("w-100")
       document.querySelector("header nav").classList.toggle("w-100")
       document.querySelector("header nav").classList.toggle("w-85")
+      queryGenBtn.classList.toggle("r-15")
+      queryGenBtn.classList.toggle("r-0")
+      document.querySelector(".open").classList.toggle("display-none")
+      document.querySelector(".open").classList.toggle("display-block")
+      document.querySelector(".close").classList.toggle("display-none")
+      document.querySelector(".close").classList.toggle("display-block")
+      // document.querySelector("a").preventDefault()
+
+
     })
 
 
