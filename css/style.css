@@ -1,9 +1,12 @@
 * {
   font-family: 'Josefin Sans', sans-serif; /* hay que elegir una fuente que les guste en https://fonts.google.com/ y despues agregarla*/
+  background-color: transparent;
 }
 
 body{
-  background-color: #00E8AE
+background-image:url("../imagenes/fondo.jpg");
+
+
 }
 
 section.generos{
@@ -11,7 +14,7 @@ section.generos{
   right: 0;
   top: 0;
   height: 100%;
-  background-color: #4ea0e8;
+  background-color: rgb(32, 58, 96);
   margin-top: 0;
   z-index: 99;
 }
@@ -33,14 +36,14 @@ section.generos ul li:first-child{
 section.generos ul li button.btn {
   height: 4.8vh;
   font-size: 1.4em;
-  color: #4ea0e8;
-  background-color: #00E8AE;
+  color: rgb(32, 58, 96);
+  background-color: rgb(153, 170, 196);
   padding-top: 5px;
   transition: 0.1s;
 }
 section.generos ul li button.btn:hover{
-  color: #00E8AE;
-    background-color:black;
+  color: rgb(32, 58, 96);
+    background-color:rgb(90, 127, 181);
     transition: 0.1s;
 }
 
@@ -57,7 +60,7 @@ section.generos div.gen-button{
   position: fixed;
   width: 50px;
   height: 50px;
-  background-color: #00E8AE;
+  background-color: rgb(32, 58, 96);
   z-index: 10;
   right: 15%;
   top: 45%;
@@ -66,7 +69,7 @@ section.generos div.gen-button{
 .gen-btn button{
   width: 50px;
   height: 50px;
-  background-color: #00E8AE;
+  background-color: rgb(32, 58, 96);
   border-radius: 5px;
   margin:0;
   padding:0;
@@ -436,3 +439,20 @@ div.uk-position-relative ul.uk-slideshow-items{
     height:20vh;
     background-color:white;
   }
+  .footer, img {
+width: 16px;
+height: 16px;
+padding-left: 5px;
+
+  }
+
+  .h1, h1 {
+    font-size: 14px;
+    margin-top: 0px;
+    padding-left: 5px;
+}
+
+.h2, h2 {
+    font-size: 14px;
+    padding-left: 5px;
+}
