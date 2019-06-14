@@ -13,6 +13,7 @@ section.generos{
   height: 100%;
   background-color: #4ea0e8;
   margin-top: 0;
+  z-index: 99;
 }
 section.generos ul {
   padding:0;
@@ -35,10 +36,12 @@ section.generos ul li button.btn {
   color: #4ea0e8;
   background-color: #00E8AE;
   padding-top: 5px;
+  transition: 0.1s;
 }
 section.generos ul li button.btn:hover{
   color: #00E8AE;
     background-color:black;
+    transition: 0.1s;
 }
 
 section.generos div.gen-button{
@@ -79,9 +82,11 @@ section.generos div.gen-button{
 /* Clases Custom (JavaScript) */
     .w-0 {
       width:0;
+      transition: 1s;
     }
     .w-15{
       width:15%;
+      transition: 1s;
     }
     .w-70{
       width:70%;
@@ -91,15 +96,22 @@ section.generos div.gen-button{
     }
     .w-85{
       width: 85%;
+      transition: 1s;
     }
     .w-100{
       width: 100%;
+      transition: 1s;
     }
     .r-0{
       right:0;
+      transition: 1s;
     }
     .r-15{
       right:15%;
+      transition: 1s;
+    }
+    .h-90vh{
+      height:90vh;
     }
     .display-none {
       display: none;
@@ -109,11 +121,9 @@ section.generos div.gen-button{
     }
 
 .container {
-  background-color: black;
-  margin-top:10vh;
   margin-left: 0;
   padding:0;
-  background-color: #00E8AEs
+  background-color: #00E8AE;
 
 }
 /*HEADER*/
@@ -245,22 +255,39 @@ section.generos div.gen-button{
     width: 20px;
     margin: 0 auto;
   }
+div.uk-position-relative ul.uk-slideshow-items{
+  min-height: inherit;
+  height:90vh;
+}
+
+
 
 /*CARRUSEL*/
+
   div.carrusel {
     position:relative;
     height:90vh;
   }
-  div.carrusel h2{
+  div.carrusel h1{
     position: absolute;
     top:0px;
     color:white;
     width:100%;
-    background-color:rgba(155,155,155,0.4);
+    background-color:rgba(50,50,50,0.4);
     z-index: 3;
     margin: 10px auto;
     padding:5px;
     text-align: center
+  }
+  div.carrusel h2{
+    top: 0px;
+    color: white;
+    width: 100%;
+    z-index: 3;
+    margin: 5px auto;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 2em;
   }
   div.carrusel {
   }
@@ -269,6 +296,7 @@ section.generos div.gen-button{
   }
   div.carrusel div.carousel-inner div.item{
     position: relative;
+    height:90vh;
   }
   div.carrusel div.carousel-inner div.item img.backdrop{
     width:100%;
@@ -276,7 +304,7 @@ section.generos div.gen-button{
   }
   div.carrusel div.carousel-inner div.item div.item-text{
     position:absolute;
-    bottom:7%;
+    bottom:10%;
     background-color: rgba(155,155,155,0.6);
     color:white;
     width:80%;
@@ -287,9 +315,9 @@ section.generos div.gen-button{
 
   /*Sección 2 de peliculas*/
   div.maspelis{
-    height:600px;
+    height:70vh;
     display:flex;
-    background-color: #00E8AE
+    background-color: #4ea0e8;
   }
   div.maspelis section{
     width:50%;
@@ -299,11 +327,12 @@ section.generos div.gen-button{
   div.maspelis section h2{
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
     margin-top: 0px;
     font-size: 3em;
     height: 58px;
     padding: 10px;
+    background-color: rgba(255,255,255,0.4);
   }
   div.maspelis section div.lista-banner{
     width:55%;
@@ -312,23 +341,98 @@ section.generos div.gen-button{
   div.maspelis section{
     display:flex;
     flex-wrap:wrap;
+    border:1px black solid;
+    border-radius: 4px;
+
   }
-  div.maspelis section div.lista-banner ol li{
-    height:50px;
-    margin:2px;
+  div.maspelis section div.lista-banner ul{
+    padding-left:0px;
+    background-color: #00E8AE;
+    list-style: none;
+    border-radius: 6px;
+    padding:1px 1px;
+    margin-left:10px;
+
+  }
+  div.maspelis section div.lista-banner ul li{
+    height:6vh;
     font-size:2em;
     background-color: yellow;
-    padding-top:8px;
-    border-radius: 3px;
+    border-radius: 6px;
+    background-color: #00E8AE;
+  }
+  div.maspelis section div.lista-banner ul li button {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 5px; */
+    background-color: yellow;
+    border: 1px;
+    border-radius: 6px;
+    background-color: #00E8AE;
+    text-align: left;
+  }
+  div.maspelis section div.lista-banner ul li button:focus {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding:5px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: #4ea0e8;
+    border:1px solid transparent;
+
+}
+  div.maspelis section div.lista-banner ul li button:hover{
+    background-color: #4ea0e8;
+  }
+  div.maspelis section div.lista-banner ul li button.active{
+    background-color: #4ea0e8;
   }
   div.maspelis section div.banner{
-    width: 42%;
-    margin-left: 1.5%;
+    height:86.5%;
+    width:44%;
+    margin-left:1px;
     margin-bottom: 2%;
     background-color: red;
+    border-radius: 6px;
+    position: relative;
+  }
+  div.maspelis section div.banner.active{
+    display:block;
+    transition: 1s;
+  }
+  div.maspelis section div.banner.inactive{
+    display:none;
+    transition: 1s;
+  }
+  div.maspelis section div.banner img{
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+  }
+  div.maspelis section div.banner div.img-banner{
+    position:absolute;
+    top:60%;
+    height:50px;
+    font-size: 3em;
+    background-color: rgba(150,150,150,0.4);
+    color: black;
+    width:100%;
+    text-align: center;
+  }
+  div.maspelis section div.banner div.img-banner a{
+    color: rgba(0,0,0,0.5);
+    text-decoration:none;
+  }
+  div.maspelis section div.banner div.img-banner:hover{
+    background-color: rgba(150,150,150,0.6);
+  }
+  div.maspelis section div.banner div.img-banner:hover a{
+    color: rgba(0,0,0,0.8);
+    text-decoration: none;
   }
 
   footer{
-    height:200px;
+    height:20vh;
     background-color:white;
   }
