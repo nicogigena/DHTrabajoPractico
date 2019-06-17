@@ -1,0 +1,45 @@
+section.core{
+  height:65vh;
+  width:100%;
+  background-color: white;
+  padding:1%;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+section.core div.imagen {
+  width:20%;
+  padding:1%;
+  border:1px solid black;
+  display:flex;
+  align-items: center;
+}
+section.core div.imagen {
+}
+
+section.core div.descripcion{
+  width:70%;
+  padding: 1%;
+}
+
+section.core div.descripcion h2 {
+  display: flex;
+  align-items: center;
+}
+
+section.core div.descripcion button{
+  width:45px;
+  margin:0;
+  margin-left:1%;
+  padding:0;
+  border:0;
+
+}
+
+
+
+section.similares {
+  height:25vh;
+  background-color: black;
+
+}

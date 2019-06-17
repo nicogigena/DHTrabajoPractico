@@ -1,6 +1,7 @@
 * {
   font-family: 'Josefin Sans', sans-serif; /* hay que elegir una fuente que les guste en https://fonts.google.com/ y despues agregarla*/
   background-color: transparent;
+  box-sizing: border-box;
 }
 
 body{
@@ -173,7 +174,7 @@ section.generos div.gen-button{
     width: 10%;
     font-size: 2em;
     text-align: center;
-    color: grey;
+    color: rgb(90, 127, 181);
     background-color: #00E8AE;
     padding: 0;
     display: flex;
@@ -209,6 +210,7 @@ section.generos div.gen-button{
     border: 1px solid slategrey;
     width:20%;
     text-align:center;
+    position: relative;
   }
   header nav div.navbar ul.nav li a.nav-link {
     padding:0;
@@ -235,6 +237,27 @@ section.generos div.gen-button{
       text-decoration: none;
       background-color: transparent;
   }
+  header nav div.navbar ul.nav li.login a:focus div.login{
+    display:block;
+  }
+  header nav div.navbar ul.nav li div.login{
+    position:absolute;
+    background-color: white;
+    color:black;
+    width:300px;
+    height:200px;
+    top:90%;
+    right:90%;
+    border-radius: 5px;
+    border:1px solid black;
+    transition:1s;
+  }
+  header nav div.navbar ul.nav li div.login form input{
+    width:80%;
+    margin:2px auto;
+    border-radius: 5px;
+    border:1px solid grey;
+  }
   header nav div.form {
 
     border-bottom-right-radius: 30px;
@@ -256,6 +279,7 @@ section.generos div.gen-button{
     margin-right:1px;
   }
   header nav form button.btn{
+    background-color: gainsboro;
     height: 34px;
     width: 15%;
     padding: 0;

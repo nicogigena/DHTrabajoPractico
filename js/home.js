@@ -14,6 +14,40 @@ window.onload = function(){
       document.querySelector(".close").classList.toggle("display-none")
       document.querySelector(".close").classList.toggle("display-block")
     })
+  queryLogin=document.querySelector("header nav div.navbar ul.nav li div.login")
+  queryLoginLi=document.querySelector(".aLogin")
+  queryLoginLi.addEventListener("click",function(){
+    queryLogin.classList.toggle("display-block")
+    queryLogin.classList.toggle("display-none")
+  })
+  var queryString = location.search
+  var queryStringObj = new URLSearchParams(queryString);
+  // console.log(queryStringObj);
+  // console.log(queryString);
+  // console.log(queryStringObj.get("nombre"));
+console.log(localStorage.getItem("nombre"));
+console.log(queryStringObj.get("nombre"));
+console.log(localStorage);
+  if (localStorage.getItem("nombre")=="null") {
+    if (queryStringObj.get("nombre")==null) {
+      document.querySelector("div.bienvenido").style.display="none";
+      document.querySelector("div.logo").style.width="20%";
+      console.log("null null");
+    } else {
+      localStorage.setItem("nombre", queryStringObj.get("nombre"))
+      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+      console.log("null form");
+    }
+  } else{
+    document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+    console.log(localStorage.getItem("nombre"));
+    console.log("local true");
+  }
+
+  console.log(localStorage.getItem("nombre"));
+
+  localStorage.setItem("nombre", queryStringObj.get("nombre"))
+  console.log(localStorage.getItem("nombre"));
 
     //MAS VALORADAS
     fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR&page=1&region=US')
@@ -21,7 +55,7 @@ window.onload = function(){
             return response.json();
         })
         .then(function(data) {
-            // console.log('data = ', data);
+            console.log('data = ', data);
             var results = data.results
 
             for (var i = 0; i < 10; i++) {
@@ -129,8 +163,7 @@ window.onload = function(){
             console.error(err);
         });
 
-  var queryString = location.search
-  var queryStringObj = new URLSearchParams(queryString);
+
 
 
 
