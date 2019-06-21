@@ -1,0 +1,62 @@
+section.core{
+  background-color: gainsboro;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.core ul.pelis {
+  display:flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding:0;
+  width:100%;
+}
+section.core ul.pelis li{
+  width:17.5%;
+  margin:1.25%;
+}
+section.core ul.pelis li div.imagen{
+  position: relative;
+}
+section.core ul.pelis li div.imagen h1{
+  position:absolute;
+  top:0;
+  text-align: center;
+  width:100%;
+  background-color: black;
+  color:white;
+  margin:0;
+  padding-top:5px;
+  font-size: 1.8em;
+}
+
+div.page ul{
+  list-style: none;
+  padding:0;
+  display:flex;
+  justify-content: center;
+}
+div.page ul li{
+  width:40px;
+  height:40px;
+  font-size:2em;
+  background-color: white;
+  margin:1px;
+  border-radius: 5px;
+  text-align: center;
+  padding-top:2px;
+}
+
+div.page{
+  justify-content: center;
+  width:50%;
+  display:flex;
+}
+div.page ul li button{
+  margin:0;
+  margin-left:1%;
+  padding:0;
+  border:0;
+  width:100%;
+}

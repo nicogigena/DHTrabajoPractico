@@ -25,29 +25,42 @@ window.onload = function(){
   // console.log(queryStringObj);
   // console.log(queryString);
   // console.log(queryStringObj.get("nombre"));
-console.log(localStorage.getItem("nombre"));
-console.log(queryStringObj.get("nombre"));
-console.log(localStorage);
   if (localStorage.getItem("nombre")=="null") {
     if (queryStringObj.get("nombre")==null) {
       document.querySelector("div.bienvenido").style.display="none";
       document.querySelector("div.logo").style.width="20%";
-      console.log("null null");
-    } else {
+      console.log(localStorage);
+    } else{
       localStorage.setItem("nombre", queryStringObj.get("nombre"))
       document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
-      console.log("null form");
+      console.log(localStorage);
     }
   } else{
-    document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
-    console.log(localStorage.getItem("nombre"));
-    console.log("local true");
+    if (queryStringObj.get("nombre")!=null) {
+      localStorage.setItem("nombre", queryStringObj.get("nombre"))
+      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+    } else {
+      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+    }
+
   }
+    // Peli Al Azar
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR&page=' + Math.ceil(Math.random()*100 + 1))
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            // console.log('data = ', data);
+            data = data.results
+            var numAlAzar = Math.ceil(Math.random()*19 + 1)
+            // console.log(numAlAzar);
+            document.querySelector("nav ul li a.aRandom").setAttribute("href", "pelicula.html?id="+ data[numAlAzar].id)
+        })
+        .catch(function(err) {
+            console.error(err);
+        });
+    
 
-  console.log(localStorage.getItem("nombre"));
-
-  localStorage.setItem("nombre", queryStringObj.get("nombre"))
-  console.log(localStorage.getItem("nombre"));
 
     //MAS VALORADAS
     fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR&page=1&region=US')
@@ -55,7 +68,7 @@ console.log(localStorage);
             return response.json();
         })
         .then(function(data) {
-            console.log('data = ', data);
+            // console.log('data = ', data);
             var results = data.results
 
             for (var i = 0; i < 10; i++) {
@@ -185,13 +198,25 @@ console.log(localStorage);
           return response.json();
       })
       .then(function(data) {
-          // console.log('data = ', data);
-          var generos = data.genres
-          // console.log(generos);
-          for (var i = 0; i < generos.length; i++) {
-            // console.log(generos[i].name);
-            document.querySelector(".generos ul").innerHTML += "<li><button type='button' name='button' class='btn w-100'>" + generos[i].name + "</button></li>"
-          }
+        // console.log('data = ', data);
+        var generos = data.genres
+        // console.log(generos);
+        for (var i = 0; i < generos.length; i++) {
+          // console.log(generos[i].name);
+          var name = generos[i].name
+          var id = generos[i].id
+          document.querySelector(".generos ul").innerHTML += "<li><button type='button' name='button' class='btn w-100' idGen=" + id + ">" + name + "</button></li>"
+        }
+        var genBtn = document.querySelectorAll(".generos ul li button")
+
+        for (var i = 0; i < generos.length; i++) {
+          genQuery = genBtn[i]
+          genId = generos[i].id
+          genQuery.addEventListener("click",function(){
+            window.location.href="generos.html?idGen=" + this.getAttribute("idGen")
+          })
+        }
+
       })
       .catch(function(err) {
           console.error(err);
@@ -221,7 +246,16 @@ console.log(localStorage);
           .catch(function(err) {
               console.error(err);
           });
-
+  var formBtn = document.querySelector("nav div.form button.buscar")
+  var formInput = document.querySelector("nav div.form input.buscar")
+  console.log(formBtn);
+  console.log(formInput);
+  formBtn.addEventListener("click", function(event){
+    if (formInput.value.length < 3) {
+      alert("Mínimo 3 caracteres para realizar la búsqueda.")
+      event.preventDefault();
+    }
+  })
 
 
 

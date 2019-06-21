@@ -1,5 +1,5 @@
 section.core{
-  height:65vh;
+  height:60vh;
   width:100%;
   background-color: white;
   padding:1%;
@@ -15,6 +15,7 @@ section.core div.imagen {
   align-items: center;
 }
 section.core div.imagen {
+
 }
 
 section.core div.descripcion{
@@ -25,6 +26,7 @@ section.core div.descripcion{
 section.core div.descripcion h2 {
   display: flex;
   align-items: center;
+  font-size:3em;
 }
 
 section.core div.descripcion button{
@@ -35,11 +37,39 @@ section.core div.descripcion button{
   border:0;
 
 }
+section.core div.descripcion p{
+    font-size: 1.4em;
+    margin-top: 10px;
+}
 
+section.core div.descripcion div.gen{
+  font-size:1.5em;
+}
+
+section.core div.descripcion div.media{
+  margin: 10px 0;
+font-size: 2em;
+color: gold;
+}
+h3.vermas{
+  background-color: white;
+  margin:0;
+  padding:10px;
+}
 
 
 section.similares {
-  height:25vh;
   background-color: black;
 
+}
+section.similares img{
+
+}
+ul.uk-slider-items{}
+ul.uk-slider-items h1{
+  margin: 0 auto;
+  width:80%;
+  text-align: center;
+padding: 5px;
+background-color: rgba(150,150,150,0.5);
 }

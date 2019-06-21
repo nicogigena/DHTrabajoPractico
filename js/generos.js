@@ -38,10 +38,10 @@ window.onload = function(){
           return response.json();
       })
       .then(function(data) {
-          console.log('data = ', data);
+          // console.log('data = ', data);
           data = data.results
           var numAlAzar = Math.ceil(Math.random()*19 + 1)
-          console.log(numAlAzar);
+          console.log("numAlAzar: " + numAlAzar);
           document.querySelector("nav ul li a.aRandom").setAttribute("href", "pelicula.html?id="+ data[numAlAzar].id)
       })
       .catch(function(err) {
@@ -67,7 +67,7 @@ window.onload = function(){
       .then(function(data) {
         // console.log('data = ', data);
         var generos = data.genres
-        // console.log(generos);
+        console.log(generos);
         for (var i = 0; i < generos.length; i++) {
           // console.log(generos[i].name);
           var name = generos[i].name
@@ -78,10 +78,15 @@ window.onload = function(){
 
         for (var i = 0; i < generos.length; i++) {
           genQuery = genBtn[i]
-          genId = generos[i].id
           genQuery.addEventListener("click",function(){
             window.location.href="generos.html?idGen=" + this.getAttribute("idGen")
           })
+        }
+        for (var i = 0; i < generos.length; i++) {
+          if (generos[i].id == queryStringObj.get("idGen")) {
+            console.log(generos[i].name);
+            document.querySelector("section.core h1.generoMain").innerHTML = generos[i].name
+          }
         }
       })
       .catch(function(err) {
@@ -108,89 +113,38 @@ window.onload = function(){
     queryLogin.classList.toggle("display-block")
     queryLogin.classList.toggle("display-none")
   })
-  var core = document.querySelector("section.core")
 
-  fetch('https://api.themoviedb.org/3/movie/' + queryStringObj.get("id") + '?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR')
+  var page = queryStringObj.get("page")
+  for (var i = 1; i < 11; i++) {
+    // console.log(i);
+    document.querySelector("div.page ul").innerHTML += "<li><button type='button' name='button' page=" + i + ">" + i + "</button></li>"
+
+  }
+  var pageBtn = document.querySelectorAll("div.page ul li button")
+  for (var i = 0; i < 10; i++) {
+      pageQuery = pageBtn[i]
+      pageQuery.addEventListener("click",function(){
+        window.location.href="generos.html?idGen=" + queryStringObj.get("idGen") + "&page=" + this.getAttribute("page")
+      })
+
+    }
+  fetch('https://api.themoviedb.org/3/discover/movie?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR&sort_by=popularity.desc&page=' + page + '&with_genres='+ queryStringObj.get("idGen"))
       .then(function(response) {
           return response.json();
       })
       .then(function(data) {
-        console.log(data);
-        // console.log(data.title);
-        // https://image.tmdb.org/t/p/original/
-        document.querySelector("section.core div.imagen").innerHTML = "<img src=https://image.tmdb.org/t/p/original/" + data.poster_path + " alt=" + data.title + ">"
+          // console.log('data = ', data);
+          data = data.results
+          // console.log(data);
+          for (var i = 0; i < data.length; i++) {
+            var pelicula = data[i]
 
-        var titulo = document.querySelector("section.core div.descripcion h2")
-        titulo.innerHTML = data.title + "<button type='button' name='fav' idFav=" + data.id + "><img src=''></button"
-        var idFav = document.querySelector("section.core div.descripcion h2 button").getAttribute("idFav")
-        if (favoritos.indexOf(idFav) == -1) {
-          document.querySelector("section.core div.descripcion h2 img").setAttribute("src", "imagenes/estrellaOff.png")
-        } else {
-          document.querySelector("section.core div.descripcion h2 img").setAttribute("src", "imagenes/estrellaOn.png")
-        }
-
-
-        document.querySelector("section.core div.descripcion h2 button").addEventListener("click", function(){
-          var idFav = this.getAttribute("idFav")
-          if (favoritos.indexOf(idFav) == -1 ) {
-            favoritos.push(idFav)
-            document.querySelector("section.core div.descripcion h2 img").setAttribute("src", "imagenes/estrellaOn.png")
-          } else{
-            var posicion = favoritos.indexOf(idFav)
-            favoritos.splice(posicion, 1);
-            document.querySelector("section.core div.descripcion h2 img").setAttribute("src", "imagenes/estrellaOff.png")
+            document.querySelector("section.core ul").innerHTML += "<li><div class='imagen'><a href=pelicula.html?id=" + pelicula.id + "><img src=https://image.tmdb.org/t/p/original/" + pelicula.poster_path + " alt=''></a><h1>" + pelicula.title + "</h1></div></li>"
           }
-          obj = {
-            carac: favoritos
-          }
-          json = JSON.stringify(obj)
-          localStorage.setItem("favs", json)
-          // console.log(localStorage);
-
-        })
-
-        // console.log(data.genres.length);
-        for (var i = 0; i < data.genres.length; i++) {
-          var genero = data.genres[i].name
-          var id = data.genres[i].id
-          var length = data.genres.length
-          if (i== 0) {
-            document.querySelector("section.core div.descripcion div.gen").innerHTML = "<a href=generos.html?idGen=" + id + ">" + genero + "</a>" + ", "
-          } else if (i<length-1){
-            document.querySelector("section.core div.descripcion div.gen").innerHTML += "<a href=generos.html?idGen=" + id + ">" + genero + "</a>" + ", "
-          } else {
-            document.querySelector("section.core div.descripcion div.gen").innerHTML += "<a href=generos.html?idGen=" + id + ">" + genero + "</a>"
-          }
-        }
-        document.querySelector("section.core div.descripcion div.media").innerText = data.vote_average + "/10"
-        document.querySelector("section.core div.descripcion p").innerText = data.overview
-        // document.querySelector(
       })
       .catch(function(err) {
           console.error(err);
       });
-
-
-//SIMILARES
-  fetch('https://api.themoviedb.org/3/movie/' + queryStringObj.get("id") + '/similar?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR&page=1')
-      .then(function(response) {
-          return response.json();
-      })
-      .then(function(data) {
-        console.log(data);
-        data = data.results
-        console.log(data);
-        for (var i = 0; i < 10; i++) {
-          var similar = data[i]
-          var ulSimilar = document.querySelector("ul.uk-slider-items")
-          // console.log(similar);
-          ulSimilar.innerHTML += "<li><div class='uk-panel'><img src='https://image.tmdb.org/t/p/original/" + similar.backdrop_path + "' alt=''><div class='uk-position-center uk-panel'><h1><a href=pelicula.html?id=" + similar.id + ">" + similar.title + "</a></h1></div></div></li>"
-        }
-      })
-      .catch(function(err) {
-          console.error(err);
-      });
-
       var formBtn = document.querySelector("nav div.form button.buscar")
       var formInput = document.querySelector("nav div.form input.buscar")
       console.log(formBtn);
@@ -201,10 +155,5 @@ window.onload = function(){
           event.preventDefault();
         }
       })
-
-//https://api.themoviedb.org/3/movie/238?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR
-
-
-
 
 }

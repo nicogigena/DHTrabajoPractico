@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/buscador.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buscador.css">
+  <title>Pelis NOC</title>
+</head>
+
+   <body>
+
+  <header>
+
+   <nav class="w-100">
+      <!-- Acá vamos a poner el navbar, con el saludo, formulario y logo -->
+      <div class="logo">
+        <img src="imagenes/1657440cf238c0e.jpg" alt="" class="">
+      </div>
+      <div class="bienvenido">
+        <div class="item-text">Bienvenido</div>
+        <div class="item-text usuario">Usuario</div>
+      </div>
+      <div class="navbar">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="home.html">HOME</a> </li>
+          <li class="nav-item"><a class="nav-link aRandom" href="#">Peli al Azar</a> </li>
+          <li class="nav-item" id="favli"><a class="nav-link" href="favoritas.html">Pelis Favoritas</a> </li>
+          <li class="nav-item" id="login"><a class="nav-link aLogin" href="#">LOGIN</a><div class="login display-none">
+              <h3>Login</h3>
+              <form class="" action="#" method="get">
+                <input type="text" name="nombre" value="" placeholder="Nombre...">
+                <input type="email" name="email" value="" placeholder="E-mail...">
+                <button type="submit" name="">Guardar</button>
+              </form>
+          </div> </li>
+        </ul>
+      </div>
+      <div class="form-group form">
+          <form class="" action="buscador.html" method="get">
+            <input class="form-control" type="text" name="buscador" value="" placeholder="Busca tu película...">
+            <button class="btn" type="submit" name=""><img src="imagenes/lupa.png" alt=""> </button>
+          </form>
+      </div>
+    </nav>
+  </header>
+  <section class="generos w-0">
+    <ul></ul>
+  </section>
+  <div class="gen-btn r-0">
+    <button class="display-block open"><img src="imagenes/open.png" alt=""> </button>
+    <button class="display-none close"><img src="imagenes/close.png" alt=""> </button>
+  </div>
+  <div class="container w-100" style="padding-top: 10vh;">
+
+    <!-- Contenedor principal, va TODA la página abajo de esto -->
+    <section class="core">
+      <h1 class="generoMain"></h1>
+      <ul class="pelis">
+
+      </ul>
+      <div class="page">
+        <ul>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+
+
+    <footer>
+      <div class="nombres">
+        <ul>
+          <li>
+            <h4>Olivia Rozze</h4>
+            <span>
+            <a><img src="imagenes/facebook.png" alt="facebook"></a>
+            <a><img src="imagenes/instagram.png" alt="instagram"></a>
+            <a><img src="imagenes/twitter.png" alt="twitter"></a>
+            </span>
+          </li>
+          <li>
+            <h4>Nicolas Gigena</h4>
+            <span>
+            <a><img src="imagenes/facebook.png" alt="facebook"></a>
+            <a><img src="imagenes/instagram.png" alt="instagram"></a>
+            <a><img src="imagenes/twitter.png" alt="twitter"></a>
+            </span>
+          </li>
+        </ul>
+
+        <div class="tmdb">
+          <img src="imagenes/tmdb.png" alt="">
+        </div>
+
+      </div>
+
+
+
+    </footer>
+  </div> <!--Div del container general-->
+
+</body>
+</html>
