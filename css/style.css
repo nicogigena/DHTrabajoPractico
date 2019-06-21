@@ -9,6 +9,13 @@ background-image:url("../imagenes/fondo.jpg");
 
 
 }
+form select{
+  width:80%;
+  margin:5px auto;
+}
+form select option{
+  width:80%;
+}
 
 section.generos{
   position: fixed;
@@ -164,7 +171,7 @@ section.generos div.gen-button{
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
-    background-color:#00E8AE;
+    background-color:#365b66;
     width:10%;
   }
   header nav div.logo img{
@@ -175,8 +182,8 @@ section.generos div.gen-button{
     width: 10%;
     font-size: 2em;
     text-align: center;
-    color: rgb(90, 127, 181);
-    background-color: #00E8AE;
+    color: white;
+    background-color: #365b66;
     padding: 0;
     display: flex;
     align-items: center;
@@ -190,7 +197,7 @@ section.generos div.gen-button{
   }
   header nav div.navbar {
     width:65%;
-    background-color: #00E8AE;
+    background-color: #365b66;
     margin-bottom:0;
     display: flex;
     border-radius: 0;
@@ -246,7 +253,7 @@ section.generos div.gen-button{
     background-color: white;
     color:black;
     width:300px;
-    height:200px;
+    height:235px;
     top:90%;
     right:90%;
     border-radius: 5px;
@@ -262,7 +269,7 @@ section.generos div.gen-button{
   header nav div.form {
 
     border-bottom-right-radius: 30px;
-    background-color: #00E8AE;
+    background-color: #365b66;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -498,7 +505,7 @@ div.uk-position-relative ul.uk-slideshow-items{
   }
 
   footer{
-    height:20vh;
+
     background-color:white;
     position: relative;
     background-color: rgb(32, 58, 96);
@@ -631,7 +638,7 @@ div.relleno{
     position: relative;
     height:50px;
     width:100%;
-    background-color: #00E8AE;
+    background-color: #365b66;
   }
   #span button{
     width:50px;
