@@ -4,6 +4,15 @@ window.onload = function(){
   var queryGenBtn = document.querySelector("div.gen-btn")
   var queryContainer = document.querySelector(".container");
 
+
+  var querySpan = document.querySelector("#span button")
+  querySpan.addEventListener("click",function(){
+    document.querySelector("header nav div.relleno").classList.toggle("top-0")
+    document.querySelector("header nav div.relleno").classList.toggle("bottom-100")
+    document.querySelector("header").classList.toggle("h-443px")
+    document.querySelector("header nav").classList.toggle("h-443px")
+  })
+
   queryGenBtn.addEventListener("click",function(){
       queryGeneros.classList.toggle("w-15")
       queryGeneros.classList.toggle("w-0")
@@ -59,7 +68,7 @@ window.onload = function(){
         .catch(function(err) {
             console.error(err);
         });
-    
+
 
 
     //MAS VALORADAS

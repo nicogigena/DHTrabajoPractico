@@ -14,6 +14,13 @@ window.onload = function(){
     // Si no habia creo el listado como VACIO
     var favoritos = []
   }
+  var querySpan = document.querySelector("#span button")
+  querySpan.addEventListener("click",function(){
+    document.querySelector("header nav div.relleno").classList.toggle("top-0")
+    document.querySelector("header nav div.relleno").classList.toggle("bottom-100")
+    document.querySelector("header").classList.toggle("h-443px")
+    document.querySelector("header nav").classList.toggle("h-443px")
+  })
 
   // console.log(queryStringObj.get("nombre"));
   if (localStorage.getItem("nombre")=="null") {

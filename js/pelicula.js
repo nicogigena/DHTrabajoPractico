@@ -14,6 +14,13 @@ window.onload = function(){
     // Si no habia creo el listado como VACIO
     var favoritos = []
   }
+  var querySpan = document.querySelector("#span button")
+  querySpan.addEventListener("click",function(){
+    document.querySelector("header nav div.relleno").classList.toggle("top-0")
+    document.querySelector("header nav div.relleno").classList.toggle("bottom-100")
+    document.querySelector("header").classList.toggle("h-443px")
+    document.querySelector("header nav").classList.toggle("h-443px")
+  })
 
   // console.log(queryStringObj.get("nombre"));
   if (localStorage.getItem("nombre")=="null") {
@@ -32,7 +39,12 @@ window.onload = function(){
       document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
     }
   }
-
+  // console.log(localStorage);
+  // localStorage.removeItem("idMovie")
+  // console.log(localStorage.getItem("idMovie"));
+  // document.querySelector("div.login form").addEventListener("submit", function(event){
+  //   localStorage.setItem("idMovie", queryStringObj.get("id"))
+  // })
   fetch('https://api.themoviedb.org/3/movie/popular?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR&page=' + Math.ceil(Math.random()*100 + 1))
       .then(function(response) {
           return response.json();

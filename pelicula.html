@@ -24,40 +24,49 @@
 
    <body>
 
-  <header>
+     <header>
 
-   <nav class="w-100">
-      <!-- Acá vamos a poner el navbar, con el saludo, formulario y logo -->
-      <div class="logo">
-        <img src="imagenes/1657440cf238c0e.jpg" alt="" class="">
-      </div>
-      <div class="bienvenido">
-        <div class="item-text">Bienvenido</div>
-        <div class="item-text usuario">Usuario</div>
-      </div>
-      <div class="navbar">
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link" href="home.html">HOME</a> </li>
-          <li class="nav-item active"><a class="nav-link aRandom" href="#">Peli al Azar</a> </li>
-          <li class="nav-item" id="favli"><a class="nav-link" href="favoritas.html">Pelis Favoritas</a> </li>
-          <li class="nav-item" id="login"><a class="nav-link aLogin" href="#">LOGIN</a><div class="login display-none">
-              <h3>Login</h3>
-              <form class="" action="#" method="get">
-                <input type="text" name="nombre" value="" placeholder="Nombre...">
-                <input type="email" name="email" value="" placeholder="E-mail...">
-                <button type="submit" name="">Guardar</button>
-              </form>
-          </div> </li>
-        </ul>
-      </div>
-      <div class="form-group form">
-          <form class="" action="buscador.html" method="get">
-            <input class="form-control" type="text" name="buscador" value="" placeholder="Busca tu película...">
-            <button class="btn" type="submit" name=""><img src="imagenes/lupa.png" alt=""> </button>
-          </form>
-      </div>
-    </nav>
-  </header>
+      <nav class="w-100">
+         <!-- Acá vamos a poner el navbar, con el saludo, formulario y logo -->
+         <div class="span" id="span">
+           <button type="button" name="button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt=""> </button>
+
+         </div>
+         <div class="relleno bottom-100">
+
+
+         <div class="logo">
+           <img src="imagenes/1657440cf238c0e.jpg" alt="" class="">
+           <!-- <button type="button" name="button"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt=""> </button> -->
+         </div>
+         <div class="bienvenido">
+           <div class="item-text">Bienvenido</div>
+           <div class="item-text usuario">Usuario</div>
+         </div>
+         <div class="navbar">
+           <ul class="nav">
+             <li class="nav-item "><a class="nav-link" href="home.html">HOME</a></li>
+             <li class="nav-item active"><a class="nav-link aRandom" href="#">Peli al Azar</a> </li>
+             <li class="nav-item" id="favli"><a class="nav-link" href="favoritas.html">Pelis Favoritas</a> </li>
+             <li class="nav-item" id="login"><a class="nav-link aLogin" href="#">LOGIN</a><div class="login display-none">
+                 <h3>Login</h3>
+                 <form class="" action="#" method="get">
+                   <input type="text" name="nombre" value="" placeholder="Nombre...">
+                   <input type="email" name="email" value="" placeholder="E-mail...">
+                   <button type="submit" name="">Guardar</button>
+                 </form>
+             </div> </li>
+           </ul>
+         </div>
+         <div class="form-group form">
+             <form class="" action="buscador.html" method="get">
+               <input class="form-control buscar" type="text" name="buscador" value="" placeholder="Busca tu película...">
+               <button class="btn buscar" type="submit" name=""><img src="imagenes/lupa.png" alt=""> </button>
+             </form>
+         </div>
+         </div>
+       </nav>
+     </header>
   <section class="generos w-0">
     <ul></ul>
   </section>
@@ -65,7 +74,7 @@
     <button class="display-block open"><img src="imagenes/open.png" alt=""> </button>
     <button class="display-none close"><img src="imagenes/close.png" alt=""> </button>
   </div>
-  <div class="container w-100" style="padding-top: 10vh;">
+  <div class="container w-100">
 
     <!-- Contenedor principal, va TODA la página abajo de esto -->
     <section class= "core">

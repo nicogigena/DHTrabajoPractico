@@ -136,6 +136,7 @@ section.generos div.gen-button{
   margin-left: 0;
   padding:0;
   background-color: #00E8AE;
+  padding-top:13vh;
 
 }
 /*HEADER*/
@@ -372,6 +373,7 @@ div.uk-position-relative ul.uk-slideshow-items{
     height:70vh;
     display:flex;
     background-color: #4ea0e8;
+    flex-wrap: wrap;
   }
   div.maspelis section{
     width:50%;
@@ -544,6 +546,10 @@ div.uk-position-relative ul.uk-slideshow-items{
     width:100%;
     height:100%;
   }
+  div.container{
+    padding-top:13vh;
+    background-color: #4ea0e8
+  }
 
   /* .h1, h1 {
     font-size: 14px;
@@ -555,3 +561,190 @@ div.uk-position-relative ul.uk-slideshow-items{
     font-size: 14px;
     padding-left: 5px;
 } */
+div.logo button{
+  display:none;
+}
+#span{
+  display:none;
+}
+div.relleno{
+  position: relative;
+  z-index:-1;
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+}
+.top-0{
+  top:0;
+  transition: 1s;
+}
+.bottom-100{
+  top:0;
+  transition: 1s;
+}
+
+.h-443px{
+  height:443px;
+  transition: 1s;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .bottom-100{
+    top:-444px;
+    transition: 1s;
+  }
+  .w-15{
+    width:55%;
+    font-size: 1em;
+  }
+  section.generos ul li{
+    height:4.8vh;
+  }
+  .r-15{
+    right:55%;
+  }
+  body{
+    background-color: #4ea0e8;
+  }
+  header{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height:50px;
+    background-color: #00E8AE;
+    display: block;
+    transition: 1s;
+  }
+  header nav {
+    height:50px;
+    display:block;
+    display:flex;
+    flex-wrap:wrap;
+    transition: 1s;
+  }
+  header div{
+    margin:0;
+    border:0;
+  }
+  #span{
+    display:block;
+    position: relative;
+    height:50px;
+    width:100%;
+    background-color: #00E8AE;
+  }
+  #span button{
+    width:50px;
+    background-color: #00E8AE;
+    height:50px;
+    position: absolute;
+    right:0;
+  }
+  header nav div.logo, header nav div.bienvenido, header nav div.navbar, header nav div.form{
+    width:100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  header nav div.logo button{
+    display:block;
+  }
+  header nav div.navbar ul.nav{
+    display:flex;
+    flex-wrap:wrap
+  }
+  header nav div.navbar ul.nav li.nav-item {
+    width:100%;
+  }
+  header nav div.form{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  header nav div.form input{
+    width:300px;
+    height:60px;
+  }
+  header nav div.form button{
+    width:60px;
+    height:60px;
+  }
+  header nav div.navbar ul.nav li div.login{
+    right:55px;
+  }
+  div.container{
+    padding-top:0px;
+  }
+  div.carrusel{
+    height:100%;
+    /* top: 240px;
+  font-size: 1.2em;
+  background-color: rgba(150,150,150,0.2);
+  text-align: center;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+  }
+  div.carrusel h1{
+    position: relative;
+    background-color: grey;
+  }
+  div.carrusel div.carousel-inner{
+    height:232px;
+  }
+
+  div.carrusel div.carousel-inner div{
+    height: 100%;
+  }
+  div.carrusel div.carousel-inner div.item div.item-text div{
+    display: none;
+  }
+    div.carrusel div.carousel-inner div.item div.item-text a{
+    top: 78%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  }
+  #myCarouesl h1{
+    background-color: rgba(255,255,255,0.4)
+  }
+  #myCarousel div.item-text{
+    height: 184px;
+    top: 0;
+    text-align: center;
+    margin: 0;
+    /* padding: 1% 12%; */
+    padding: 1% 12%;
+    width: 100%;
+  }
+  #myCarouesl div.item-text a{
+    width:100%;
+  }
+  div.carrusel div.carousel-inner div.item div.item-text h2{
+    font-size: 1.5em;
+    margin:0 auto;
+  }
+  div.maspelis section{
+    width:100%;
+  }
+  div.maspelis section div.banner div.img-banner{
+    height:110px;
+  }
+  div.maspelis button{
+    font-size:0.6em;
+  }
+  div.maspelis{
+    height:100%;
+  }
+  footer{
+    height: 100%;
+  }
+  footer div.nombres{
+    margin-left: 10%;
+  }
+  footer div.tmdb{
+    width:40%;
+  }
+#myCarousel div.item div.item-text{
+    background-color: rgba(155,155,155,0.3);
+  }
+}

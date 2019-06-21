@@ -73,3 +73,119 @@ ul.uk-slider-items h1{
 padding: 5px;
 background-color: rgba(150,150,150,0.5);
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .bottom-100{
+    top:-444px;
+    transition: 1s;
+  }
+  body{
+    background-color: #4ea0e8;
+  }
+  header{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height:50px;
+    background-color: #00E8AE;
+    display: block;
+    transition: 1s;
+  }
+  header nav {
+    height:50px;
+    display:block;
+    display:flex;
+    flex-wrap:wrap;
+    transition: 1s;
+  }
+  header div{
+    margin:0;
+    border:0;
+  }
+  #span{
+    display:block;
+    position: relative;
+    height:50px;
+    width:100%;
+    background-color: #00E8AE;
+  }
+  #span button{
+    width:50px;
+    background-color: #00E8AE;
+    height:50px;
+    position: absolute;
+    right:0;
+  }
+  header nav div.logo, header nav div.bienvenido, header nav div.navbar, header nav div.form{
+    width:100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  header nav div.logo button{
+    display:block;
+  }
+  header nav div.navbar ul.nav{
+    display:flex;
+    flex-wrap:wrap
+  }
+  header nav div.navbar ul.nav li.nav-item {
+    width:100%;
+  }
+  header nav div.form{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  header nav div.form input{
+    width:300px;
+    height:60px;
+  }
+  header nav div.form button{
+    width:60px;
+    height:60px;
+  }
+  header nav div.navbar ul.nav li div.login{
+    right:55px;
+  }
+  body div.container.w-100{
+    padding-top:0px;
+  }
+  section.core{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    height:100%;
+  }
+  section.core div.imagen {
+    width: 55%;
+    margin: 0 auto;
+  }
+  section.core div.descripcion{
+    width:100%;
+  }
+  .w-15{
+    width:55%;
+    font-size: 1em;
+  }
+  section.generos ul li{
+    height:4.8vh;
+  }
+  .r-15{
+    right:55%;
+  }
+  section.similares div ul li div div h1{
+    width:100%;
+  }
+  section.similares div ul li div div h1 a{
+    font-size: 30px;
+  }
+
+  footer{
+    height: 100%;
+  }
+  footer div.nombres{
+    margin-left: 10%;
+  }
+  footer div.tmdb{
+    width:40%;
+  }
+}
