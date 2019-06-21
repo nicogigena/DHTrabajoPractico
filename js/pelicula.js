@@ -22,23 +22,37 @@ window.onload = function(){
     document.querySelector("header nav").classList.toggle("h-443px")
   })
 
-  // console.log(queryStringObj.get("nombre"));
-  if (localStorage.getItem("nombre")=="null") {
-    if (queryStringObj.get("nombre")==null) {
+  //LOGIN LOCAL STORAGE
+    var loginA = document.querySelector("#login a");
+    var logonLi = document.querySelector("#login");
+    document.querySelector("#login form").addEventListener("submit",function(event){
+      var nombre = document.querySelector("#nombre").value;
+      localStorage.setItem("nombre", nombre);
+    })
+    console.log(localStorage.getItem("nombre"));
+
+    if (localStorage.getItem("nombre")=="" || localStorage.getItem("null")) {
+      localStorage.removeItem("nombre")
+    }
+    if (localStorage.getItem("nombre")==null) {
       document.querySelector("div.bienvenido").style.display="none";
       document.querySelector("div.logo").style.width="20%";
+      document.querySelector("#favli").style.display="none";
+      queryLogin=document.querySelector("header nav div.navbar ul.nav li div.login")
+      document.querySelector("#login a").addEventListener("click",function(){
+        queryLogin.classList.toggle("display-block")
+        queryLogin.classList.toggle("display-none")
+      })
     } else{
-      localStorage.setItem("nombre", queryStringObj.get("nombre"))
-      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+      loginA.innerHTML="LOGOUT"
+      document.querySelector("div.usuario").innerText = localStorage.getItem("nombre")
+      document.querySelector("#login a").addEventListener("click",function(){
+        localStorage.removeItem("nombre")
+        window.location.href="home.html"
+
+      })
     }
-  } else{
-    if (queryStringObj.get("nombre")!=null) {
-      localStorage.setItem("nombre", queryStringObj.get("nombre"))
-      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
-    } else {
-      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
-    }
-  }
+    document.querySelector("#logout").style.display="none"
   // console.log(localStorage);
   // localStorage.removeItem("idMovie")
   // console.log(localStorage.getItem("idMovie"));
@@ -114,12 +128,7 @@ window.onload = function(){
       document.querySelector(".close").classList.toggle("display-none")
       document.querySelector(".close").classList.toggle("display-block")
     })
-  queryLogin=document.querySelector("header nav div.navbar ul.nav li div.login")
-  queryLoginLi=document.querySelector(".aLogin")
-  queryLoginLi.addEventListener("click",function(){
-    queryLogin.classList.toggle("display-block")
-    queryLogin.classList.toggle("display-none")
-  })
+
   var core = document.querySelector("section.core")
 
   fetch('https://api.themoviedb.org/3/movie/' + queryStringObj.get("id") + '?api_key=515c73c060475afdc6d4bfe35f81b7e3&language=es-AR')

@@ -21,12 +21,7 @@ window.onload = function(){
 
 
   //DIV LOGIN
-  queryLogin=document.querySelector("header nav div.navbar ul.nav li div.login")
-  queryLoginLi=document.querySelector(".aLogin")
-  queryLoginLi.addEventListener("click",function(){
-    queryLogin.classList.toggle("display-block")
-    queryLogin.classList.toggle("display-none")
-  })
+
 
 
   //GENEROS LIST
@@ -61,25 +56,57 @@ window.onload = function(){
 
 
   //LOGIN LOCAL STORAGE
-  if (localStorage.getItem("nombre")=="null") {
-    if (queryStringObj.get("nombre")==null) {
+    var loginA = document.querySelector("#login a");
+    var logonLi = document.querySelector("#login");
+    document.querySelector("#login form").addEventListener("submit",function(event){
+      var nombre = document.querySelector("#nombre").value;
+      localStorage.setItem("nombre", nombre);
+    })
+    console.log(localStorage.getItem("nombre"));
+
+    if (localStorage.getItem("nombre")=="" || localStorage.getItem("null")) {
+      localStorage.removeItem("nombre")
+    }
+    if (localStorage.getItem("nombre")==null) {
       document.querySelector("div.bienvenido").style.display="none";
       document.querySelector("div.logo").style.width="20%";
-      console.log(localStorage);
+      document.querySelector("#favli").style.display="none";
+      queryLogin=document.querySelector("header nav div.navbar ul.nav li div.login")
+      document.querySelector("#login a").addEventListener("click",function(){
+        queryLogin.classList.toggle("display-block")
+        queryLogin.classList.toggle("display-none")
+      })
     } else{
-      localStorage.setItem("nombre", queryStringObj.get("nombre"))
-      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
-      console.log(localStorage);
-    }
-  } else{
-    if (queryStringObj.get("nombre")!=null) {
-      localStorage.setItem("nombre", queryStringObj.get("nombre"))
-      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
-    } else {
-      document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
-    }
+      loginA.innerHTML="LOGOUT"
+      document.querySelector("div.usuario").innerText = localStorage.getItem("nombre")
+      document.querySelector("#login a").addEventListener("click",function(){
+        localStorage.removeItem("nombre")
+        window.location.href="home.html"
 
-  }
+      })
+    }
+    document.querySelector("#logout").style.display="none"
+
+  // localStorage.removeItem("nombre")
+  // if (localStorage.getItem("nombre")==null) {
+  //   if (queryStringObj.get("nombre")==null) {
+  //     document.querySelector("div.bienvenido").style.display="none";
+  //     document.querySelector("div.logo").style.width="20%";
+  //     console.log(localStorage);
+  //   } else{
+  //     localStorage.setItem("nombre", queryStringObj.get("nombre"))
+  //     document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+  //     console.log(localStorage);
+  //   }
+  // } else{
+  //   if (queryStringObj.get("nombre")!=null) {
+  //     localStorage.setItem("nombre", queryStringObj.get("nombre"))
+  //     document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+  //   } else {
+  //     document.querySelector("div.bienvenido div.usuario").innerText=localStorage.getItem("nombre");
+  //   }
+  //
+  // }
 
 
   // Peli Al Azar de POPULAR

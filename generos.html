@@ -45,13 +45,16 @@
          </div>
          <div class="navbar">
            <ul class="nav">
-             <li class="nav-item "><a class="nav-link" href="home.html">HOME</a></li>
+             <li class="nav-item active"><a class="nav-link" href="home.html">HOME</a></li>
              <li class="nav-item"><a class="nav-link aRandom" href="#">Peli al Azar</a> </li>
              <li class="nav-item" id="favli"><a class="nav-link" href="favoritas.html">Pelis Favoritas</a> </li>
-             <li class="nav-item" id="login"><a class="nav-link aLogin" href="#">LOGIN</a><div class="login display-none">
+             <li class="nav-item display-none" id="logout"><a class="nav-link" href="">LOGOUT</a> </li>
+
+             <li class="nav-item" id="login"><a class="nav-link aLogin" href="#">LOGIN</a>
+               <div class="login display-none">
                  <h3>Login</h3>
-                 <form class="" action="#" method="get">
-                   <input type="text" name="nombre" value="" placeholder="Nombre...">
+                 <form class="" action="home.html" method="get">
+                   <input type="text" id="nombre" name="nombre" value="" placeholder="Nombre...">
                    <select class="" name="">
                      <option value="">Define tu genero...</option>
                      <option value="M">Hombre</option>
